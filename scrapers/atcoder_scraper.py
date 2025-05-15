@@ -37,7 +37,7 @@ class AtCoderScraper(BaseScraper):
                 continue
 
             contest_name = cols[1].text.strip()
-            contest_url = f"https://atcoder.jp{cols[1].find("a")["href"]}"
+            contest_url = f"https://atcoder.jp{cols[1].find('a')['href']}"
 
             contests.append(
                 {
