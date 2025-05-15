@@ -4,6 +4,7 @@ import datetime
 import os
 from utils.database import get_live_db, init_db
 from utils.pretty_print import get_color
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -87,4 +88,4 @@ def index():
 if __name__ == "__main__":
     if not os.path.exists("contests.db"):
         init_db()
-    app.run(debug=True)
+    serve(app, host="0.0.0.0", port=5000)
