@@ -68,5 +68,5 @@ def get_live_db(conn: sqlite3.Connection):
     current_time = datetime.datetime.now()
 
     # If database was updated more than an 6 hour ago, schedule a scrape
-    if (current_time - last_update).total_seconds() > 21600:
+    if (current_time - last_update).total_seconds() > 86400:
         scrape_contests(conn)
