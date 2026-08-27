@@ -89,4 +89,5 @@ if __name__ == "__main__":
         init_db()
 
     # run the flask server
-    app.run(port=8000)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(port=port)
