@@ -1,3 +1,4 @@
 __pycache__/
 contests.db
 venv/
+.playwright-mcp
